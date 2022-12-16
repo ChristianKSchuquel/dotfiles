@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 "    Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	
 Plug 'kyazdani42/nvim-web-devicons'
 
@@ -20,11 +20,11 @@ Plug 'https://github.com/max-0406/autoclose.nvim'
 Plug 'declancm/cinnamon.nvim'
 
 " main one
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 " 9000+ Snippets
-"Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 
-Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+ Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
