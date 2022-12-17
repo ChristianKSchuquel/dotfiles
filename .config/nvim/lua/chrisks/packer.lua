@@ -55,4 +55,11 @@ return require('packer').startup(function(use)
 			{'rafamadriz/friendly-snippets'},
 		}
 	}
+
+    use('vim-airline/vim-airline')
+    use('vim-airline/vim-airline-themes')
+
+    use('ghifarit53/tokyonight-vim')
+
+    use('kaicataldo/material.vim', {branch = 'main'})
 end)

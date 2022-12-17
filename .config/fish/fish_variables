@@ -13,7 +13,7 @@ SETUVAR _fish_abbr_la:lsd\x20\x2da\x20\x2d\x2dgroup\x2ddirs\x3dfirst
 SETUVAR _fish_abbr_ls:lsd\x20\x2d\x2doneline\x20\x2d\x2dgroup\x2ddirs\x3dfirst
 SETUVAR _fish_abbr_ltree:lsd\x20\x2d\x2dtree
 SETUVAR _fish_abbr_nv:nvim
-SETUVAR _fish_abbr_nvconfig:nvim\x20\x7e/\x2econfig/nvim/init\x2evim
+SETUVAR _fish_abbr_nvconfig:nvim\x20\x7e/\x2econfig/nvim/init\x2elua
 SETUVAR _fish_abbr_proj:\x7e/Projects
 SETUVAR _fish_abbr_rmv:sudo\x20apt\x20remove
 SETUVAR _fish_abbr_uu:sudo\x20apt\x20update\x3bsudo\x20apt\x20upgrade

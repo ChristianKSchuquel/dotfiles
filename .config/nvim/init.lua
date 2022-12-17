@@ -4,6 +4,7 @@ require("autoclose").setup({})
 require('Comment').setup()
 
 vim.cmd([[
-	colorscheme PaperColor
+	colorscheme material
  	hi normal guibg=NONE ctermbg=NONE
 ]])
+
