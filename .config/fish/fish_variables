@@ -11,7 +11,7 @@ SETUVAR _fish_abbr_i3config:nvim\x20\x7e/\x2econfig/i3/config
 SETUVAR _fish_abbr_install:sudo\x20apt\x20install
 SETUVAR _fish_abbr_la:lsd\x20\x2da\x20\x2d\x2dgroup\x2ddirs\x3dfirst
 SETUVAR _fish_abbr_ls:lsd\x20\x2d\x2doneline\x20\x2d\x2dgroup\x2ddirs\x3dfirst
-SETUVAR _fish_abbr_ltree:lsd\x20\x2d\x2dtree
+SETUVAR _fish_abbr_ltree:lsd\x20\x2d\x2dtree\x20\x2d\x2dgroup\x2ddirs\x3dfirst
 SETUVAR _fish_abbr_nv:nvim
 SETUVAR _fish_abbr_nvconfig:nvim\x20\x7e/\x2econfig/nvim/init\x2elua
 SETUVAR _fish_abbr_proj:\x7e/Projects
