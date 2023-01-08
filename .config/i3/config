@@ -200,8 +200,7 @@ hide_edge_borders both
 # finds out, if available)
 bar {
 	status_command ~/.local/bin/bumblebee-status \
-        -m speedtest caffeine layout cpu memory disk battery brightness time \
-		pasink pasource \
+        -m  caffeine layout cpu memory disk brightness pasink time battery \
         -p time.format="%H:%M" \
         -t gruvbox-powerline
 }
