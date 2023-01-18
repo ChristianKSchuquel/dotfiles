@@ -18,7 +18,6 @@ return require('packer').startup(function(use)
     use "EdenEast/nightfox.nvim" -- Packer
 
     use  'NLKNguyen/papercolor-theme'
-
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     use("ThePrimeagen/harpoon")
@@ -68,4 +67,6 @@ return require('packer').startup(function(use)
     use('glepnir/dashboard-nvim')
 
     use('fatih/vim-go')
+
+    use('MattesGroeger/vim-bookmarks')
 end)
