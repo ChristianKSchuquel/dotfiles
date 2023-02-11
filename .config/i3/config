@@ -267,6 +267,7 @@ exec_always nitrogen --restore
 exec_always vivaldi
 exec_always $terminal
 exec_always picom -I 1 -O 1
+exec_always copyq
 exec --no-startup-id python /home/chrisks/.config/i3/i3-swallow.py
 exec "setxkbmap -layout us,br"
 exec "setxkbmap -option 'grp:alt_shift_toggle'"
