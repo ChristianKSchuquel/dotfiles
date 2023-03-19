@@ -55,7 +55,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    use('vim-airline/vim-airline')
     use('vim-airline/vim-airline-themes')
 
     use('ghifarit53/tokyonight-vim')
@@ -64,21 +63,26 @@ return require('packer').startup(function(use)
 
     use 'nvim-treesitter/nvim-treesitter-context'
 
-    use('glepnir/dashboard-nvim')
-
     use('fatih/vim-go')
 
     use('MattesGroeger/vim-bookmarks')
 
-    use({
-        "Pocco81/auto-save.nvim",
+    use('iamcco/markdown-preview.nvim', { run = 'cd app && yarn install'  })
+
+    use {
+        'glepnir/dashboard-nvim',
+        event = 'VimEnter',
         config = function()
-            require("auto-save").setup {
-                -- your config goes here
-                -- or just leave it empty :)
+            require('dashboard').setup {
+                -- config
             }
         end,
-    })
+        requires = {'nvim-tree/nvim-web-devicons'}
+    }
 
-    use('iamcco/markdown-preview.nvim', { run = 'cd app && yarn install'  })
+    use('ggandor/leap.nvim')
+
+    use('norcalli/nvim-colorizer.lua')
+
+    use('feline-nvim/feline.nvim')
 end)

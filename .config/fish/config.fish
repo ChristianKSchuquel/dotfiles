@@ -9,16 +9,22 @@
     echo -n Setting abbreviations... 
 
     abbr cls 'clear'
+    abbr ls 'lsd --oneline --group-dirs=first'
     abbr y 'yay'
     abbr pS 'sudo pacman -S'
     abbr pR 'sudo pacman -R'
     abbr pU 'sudo pacman -Syu'
     abbr bt 'bashtop'
-    alias lg 'lazygit'
-    alias grm 'go run main.go'
-    alias i3config '~/.config/i3; nvim .'
-    alias nvconfig '~/.config/nvim; nvim .'
-    alias fshconfig '~/.config/fish; nvim .'
+    abbr lg 'lazygit'
+    abbr grm 'go run main.go'
+    abbr cr 'cargo run'
+    abbr i3config '~/.config/i3; nvim .'
+    abbr nvconfig '~/.config/nvim; nvim .'
+    abbr fshconfig '~/.config/fish; nvim .'
+    abbr oSn 'optimus-manager --switch nvidia --no-confirm' 
+    abbr nv 'nvim .'
+    abbr hdmioff 'xrandr --output HDMI-0 --off'
+    abbr hdmion 'xrandr --output HDMI-0 --auto --right-of eDP-1-1'
 
     echo 'Done'
 end
