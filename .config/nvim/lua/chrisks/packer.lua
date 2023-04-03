@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
     use("ThePrimeagen/harpoon")
 
-    use('m4xshen/autoclose.nvim') 
+    use('m4xshen/autoclose.nvim')
 
     use("tpope/vim-fugitive")
 
@@ -85,4 +85,6 @@ return require('packer').startup(function(use)
     use('norcalli/nvim-colorizer.lua')
 
     use('feline-nvim/feline.nvim')
+
+    use('Exafunction/codeium.vim')
 end)

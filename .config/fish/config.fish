@@ -9,7 +9,7 @@
     echo -n Setting abbreviations... 
 
     abbr cls 'clear'
-    abbr ls 'lsd --oneline --group-dirs=first'
+    abbr ls 'lsd -a --oneline --group-dirs=first'
     abbr y 'yay'
     abbr pS 'sudo pacman -S'
     abbr pR 'sudo pacman -R'
@@ -27,4 +27,9 @@
     abbr hdmion 'xrandr --output HDMI-0 --auto --right-of eDP-1-1'
 
     echo 'Done'
+
+    function mkcd
+        mkdir -pv $argv;
+        cd $argv;
+    end
 end

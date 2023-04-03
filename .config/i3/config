@@ -8,6 +8,7 @@
 # =======================================================
 
 set $mod Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -22,6 +23,21 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 exec --no-startup-id xrandr --output HDMI-0 --auto --right-of eDP-1-1
 
+# =======================================================
+# Keyboard Stuff
+# =======================================================
+
+bindsym $alt+Control+c exec setxkbmap us -variant colemak_dh
+bindsym $alt+Control+q exec setxkbmap us
+exec setxkbmap -layout us,br
+exec setxkbmap -option grp:alt_shift_toggle
+exec setxkbmap -option caps:backspace
+
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ 
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 
 # =======================================================
 # Autotiling
@@ -256,26 +272,14 @@ bar {
         -t gruvbox-powerline
 }
 
-#=====================================
-# Audio and Brightness fixes        
-#=====================================
-
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ 
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
-
 #================
 # Execs
 #================
 
-bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?nature' --keep-http --output-dir /tmp/
-exec_always feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?nature' --keep-http --output-dir /tmp/
+bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
+exec_always feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
 exec_always vivaldi
 exec_always $terminal
 exec_always picom -I 1 -O 1
 exec_always copyq
 exec --no-startup-id python /home/chrisks/.config/i3/i3-swallow.py
-exec "setxkbmap -layout us,br"
-exec "setxkbmap -option 'grp:alt_shift_toggle'"

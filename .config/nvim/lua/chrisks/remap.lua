@@ -14,3 +14,4 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- replace current word in entire file
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+
