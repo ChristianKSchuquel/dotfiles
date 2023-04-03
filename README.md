@@ -1,3 +1,3 @@
 # My Dotfiles
 
-My config files for neovim, i3, polybar, bash, fish, etc.
+My config files for neovim, i3, fish, kitty, etc.
