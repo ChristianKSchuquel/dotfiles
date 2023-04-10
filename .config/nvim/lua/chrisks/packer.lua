@@ -87,4 +87,15 @@ return require('packer').startup(function(use)
     use('feline-nvim/feline.nvim')
 
     use('Exafunction/codeium.vim')
+
+    use("nvim-tree/nvim-tree.lua")
+
+    use { "catppuccin/nvim", as = "catppuccin" }
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
 end)

@@ -25,6 +25,10 @@
     abbr nv 'nvim .'
     abbr hdmioff 'xrandr --output HDMI-0 --off'
     abbr hdmion 'xrandr --output HDMI-0 --auto --right-of eDP-1-1'
+    abbr mysqlStart 'sudo systemctl start mysql'
+    abbr mysqlStop 'sudo systemctl stop mysql'
+    abbr mongoStart 'sudo systemctl start mongodb'
+    abbr mongoStop 'sudo systemctl stop mongodb'
 
     echo 'Done'
 

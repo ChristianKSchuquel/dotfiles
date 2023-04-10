@@ -7,3 +7,5 @@ vim.diagnostic.config {
   signs =true, 
   underline = true,
 }
+
+vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
