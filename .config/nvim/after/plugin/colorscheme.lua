@@ -4,7 +4,7 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false,
+    transparent_background = true,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = false,
     dim_inactive = {
@@ -44,7 +44,7 @@ require("catppuccin").setup({
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
 
-vim.cmd([[
- 	hi normal guibg=NONE ctermbg=NONE
-]])
+-- vim.cmd([[
+--  	hi normal guibg=NONE ctermbg=NONE
+-- ]])
 

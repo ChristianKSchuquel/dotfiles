@@ -98,4 +98,15 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     }
+
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    }
+
+    use('ThePrimeagen/vim-be-good')
+
 end)

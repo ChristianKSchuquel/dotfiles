@@ -27,11 +27,9 @@ exec --no-startup-id xrandr --output HDMI-0 --auto --right-of eDP-1-1
 # Keyboard Stuff
 # =======================================================
 
-bindsym $alt+Control+c exec setxkbmap us -variant colemak_dh
-bindsym $alt+Control+q exec setxkbmap us
-exec setxkbmap -layout us,br
-exec setxkbmap -option grp:alt_shift_toggle
-exec setxkbmap -option caps:backspace
+# To use the bind bellow my colemak adaptation to Portuguese(br) is needed at /usr/share/x11/symbols/br
+bindsym $alt+Control+c exec setxkbmap -layout "br,us" -variant "colemak_dh,colemak_dh" -option "caps:backspace, grp:alt_shift_toggle"
+bindsym $alt+Control+q exec setxkbmap -layout "us,br" -option "grp:alt_shift_toggle"
 
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 

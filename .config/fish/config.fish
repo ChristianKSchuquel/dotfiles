@@ -1,9 +1,10 @@
 ﻿if status is-interactive
 # Commands to run in interactive sessions can go here
+
+    export EDITOR=nvim
     alias "config"='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-    setxkbmap -layout us,br
-    setxkbmap -option 'grp:alt_shift_toggle'
-    
+    set -gx PATH $PATH ~/.cargo/bin
+    setxkbmap -layout us,br -option 'grp:alt_shift_toggle'
     neofetch
 
     echo -n Setting abbreviations... 
@@ -22,13 +23,20 @@
     abbr nvconfig '~/.config/nvim; nvim .'
     abbr fshconfig '~/.config/fish; nvim .'
     abbr oSn 'optimus-manager --switch nvidia --no-confirm' 
-    abbr nv 'nvim .'
+    abbr nv 'nvim'
     abbr hdmioff 'xrandr --output HDMI-0 --off'
     abbr hdmion 'xrandr --output HDMI-0 --auto --right-of eDP-1-1'
     abbr mysqlStart 'sudo systemctl start mysql'
     abbr mysqlStop 'sudo systemctl stop mysql'
     abbr mongoStart 'sudo systemctl start mongodb'
     abbr mongoStop 'sudo systemctl stop mongodb'
+    abbr tattach 'tmux attach'
+    abbr tkillall 'tmux kill-session -a'
+    abbr tnew 'tmux new-session -s'
+    abbr mv 'mv -i'
+    abbr cp 'cp -i'
+    abbr rm 'rm -i'
+    abbr curl 'xh'
 
     echo 'Done'
 
