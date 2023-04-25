@@ -1,13 +1,12 @@
 ﻿if status is-interactive
 # Commands to run in interactive sessions can go here
 
+    set fish_greeting ""
     export EDITOR=nvim
     alias "config"='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
     set -gx PATH $PATH ~/.cargo/bin
     setxkbmap -layout us,br -option 'grp:alt_shift_toggle'
-    neofetch
-
-    echo -n Setting abbreviations... 
+    colorscript random
 
     abbr cls 'clear'
     abbr ls 'lsd -a --oneline --group-dirs=first'
@@ -30,15 +29,13 @@
     abbr mysqlStop 'sudo systemctl stop mysql'
     abbr mongoStart 'sudo systemctl start mongodb'
     abbr mongoStop 'sudo systemctl stop mongodb'
-    abbr tattach 'tmux attach'
+    abbr ta 'tmux attach'
     abbr tkillall 'tmux kill-session -a'
     abbr tnew 'tmux new-session -s'
     abbr mv 'mv -i'
     abbr cp 'cp -i'
     abbr rm 'rm -i'
     abbr curl 'xh'
-
-    echo 'Done'
 
     function mkcd
         mkdir -pv $argv;

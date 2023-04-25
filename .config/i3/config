@@ -41,7 +41,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 # Autotiling
 # =======================================================
 
-exec_always --no-startup-id autotiling -w 2
+exec_always --no-startup-id /usr/bin/alternating_layouts.py
 
 # ======================================================= 
 # Program Binds 
