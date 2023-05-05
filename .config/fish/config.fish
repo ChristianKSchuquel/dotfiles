@@ -5,7 +5,6 @@
     export EDITOR=nvim
     alias "config"='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
     set -gx PATH $PATH ~/.cargo/bin
-    setxkbmap -layout us,br -option 'grp:alt_shift_toggle'
     colorscript random
 
     abbr cls 'clear'

@@ -270,6 +270,12 @@ bar {
         -t gruvbox-powerline
 }
 
+# bar toggle, hide or show
+# bindsym $mod+b bar mode toggle
+
+bindsym $mod+m bar mode invisible 
+bindsym $mod+n bar mode dock
+
 #================
 # Execs
 #================
