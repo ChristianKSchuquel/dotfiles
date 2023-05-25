@@ -42,12 +42,12 @@ return require('packer').startup(function(use)
             {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
+            -- {'hrsh7th/nvim-cmp'},
+            -- {'hrsh7th/cmp-buffer'},
+            -- {'hrsh7th/cmp-path'},
+            -- {'saadparwaiz1/cmp_luasnip'},
+            -- {'hrsh7th/cmp-nvim-lsp'},
+            -- {'hrsh7th/cmp-nvim-lua'},
 
             -- Snippets
             {'L3MON4D3/LuaSnip'},
@@ -108,5 +108,9 @@ return require('packer').startup(function(use)
     }
 
     use('ThePrimeagen/vim-be-good')
+
+    use('ms-jpq/coq_nvim', {branch = 'coq'})
+    use('ms-jpq/coq.thirdparty', {branch = '3p'})
+    use('ms-jpq/coq.artifacts', {branch = 'artifacts'})
 
 end)

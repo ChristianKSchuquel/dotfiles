@@ -3,16 +3,17 @@
 
     set fish_greeting ""
     export EDITOR=nvim
-    alias "config"='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+    alias "config"='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
     set -gx PATH $PATH ~/.cargo/bin
     colorscript random
 
     abbr cls 'clear'
     abbr ls 'lsd -a --oneline --group-dirs=first'
     abbr y 'yay'
+    abbr rf 'rm -rf'
     abbr pS 'sudo pacman -S'
     abbr pR 'sudo pacman -R'
-    abbr pU 'sudo pacman -Syu'
+    abbr pU 'sudo pacman -Syyu'
     abbr bt 'bashtop'
     abbr lg 'lazygit'
     abbr grm 'go run main.go'
@@ -35,9 +36,13 @@
     abbr cp 'cp -i'
     abbr rm 'rm -i'
     abbr curl 'xh'
+    abbr mvngen 'mvn archetype:generate -DgroupId=JavaProject -DartifactId=JavaProject -DpackageName=JavaProject -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false'
 
     function mkcd
         mkdir -pv $argv;
         cd $argv;
     end
 end
+
+# Turso
+export PATH="/home/chrisks/.turso:$PATH"

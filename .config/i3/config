@@ -27,6 +27,9 @@ exec --no-startup-id xrandr --output HDMI-0 --auto --right-of eDP-1-1
 # Keyboard Stuff
 # =======================================================
 
+exec --no-startup-id "setxkbmap -layout 'br,us' -variant 'colemak_dh,colemak_dh' -option 'caps:backspace, grp:alt_shift_toggle'"
+# exec --no-startup-id "setxkbmap -layout 'us,br' -option 'grp:alt_shift_toggle'"
+
 # To use the bind bellow my colemak adaptation to Portuguese(br) is needed at /usr/share/x11/symbols/br
 bindsym $alt+Control+c exec "setxkbmap -layout 'br,us' -variant 'colemak_dh,colemak_dh' -option 'caps:backspace, grp:alt_shift_toggle'"
 bindsym $alt+Control+q exec "setxkbmap -layout 'us,br' -option 'grp:alt_shift_toggle'"
@@ -41,13 +44,13 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 # Autotiling
 # =======================================================
 
-exec_always --no-startup-id /usr/bin/alternating_layouts.py
+exec_always --no-startup-id ~/autotiling.py
 
 # ======================================================= 
 # Program Binds 
 #======================================================= 
 #start a terminal
-set $terminal kitty
+set $terminal alacritty
 bindsym $mod+Return exec $terminal
 
 
@@ -265,7 +268,7 @@ bar {
     bindsym button4 nop
     bindsym button5 nop
 
-	status_command ~/.local/bin/bumblebee-status \
+	status_command bumblebee-status \
         -m  caffeine layout cpu memory disk brightness pasink datetime battery \
         -t gruvbox-powerline
 }
