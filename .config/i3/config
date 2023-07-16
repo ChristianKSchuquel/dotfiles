@@ -50,7 +50,8 @@ exec_always --no-startup-id ~/autotiling.py
 # Program Binds 
 #======================================================= 
 #start a terminal
-set $terminal alacritty
+# set $terminal alacritty
+set $terminal kitty
 bindsym $mod+Return exec $terminal
 
 
@@ -71,7 +72,6 @@ bindsym $mod+Shift+r restart
 # Lock Screen Script
 bindsym $mod+shift+x exec bash /home/chrisks/.config/i3/lock.sh 
 
-# Exit mode: press l to logout, r to reboot, or s to shutdown
 mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
 
   bindsym l exec i3-msg exit
@@ -253,10 +253,10 @@ set $urgent-bg-color #FF425A
 
 # Window Colors
 #                           border                  background              text                    indicator
-client.focused              $bg-color               $bg-color               $text-color             #00ff00
-client.unfocused            $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #00ff00
-client.focused_inactive     $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #00ff00
-client.urgent               $urgent-bg-color        $urgent-bg-color        $text-color             #00ff00
+client.focused              $bg-color               $bg-color               $text-color             #000000
+client.unfocused            $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #000000
+client.focused_inactive     $inactive-bg-color      $inactive-bg-color      $inactive-text-color    #000000
+client.urgent               $urgent-bg-color        $urgent-bg-color        $text-color             #000000
 
 hide_edge_borders both
 
@@ -269,8 +269,9 @@ bar {
     bindsym button5 nop
 
 	status_command bumblebee-status \
-        -m  caffeine layout cpu memory disk brightness pasink datetime battery \
-        -t gruvbox-powerline
+        -m layout cpu memory disk brightness pasink datetime battery \
+        -t gruvbox-powerline \
+        -p datetime.format="%a - %e/%m/%Y - %H:%M:%S"
 }
 
 # bar toggle, hide or show
@@ -285,8 +286,6 @@ bindsym $mod+n bar mode dock
 
 bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
 exec_always feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
-exec_always vivaldi
 exec_always $terminal
 exec_always picom -I 1 -O 1
 exec_always copyq
-exec --no-startup-id python /home/chrisks/.config/i3/i3-swallow.py

@@ -18,10 +18,11 @@
     abbr lg 'lazygit'
     abbr grm 'go run main.go'
     abbr cr 'cargo run'
-    abbr i3config '~/.config/i3; nvim .'
+    abbr i3config '~/.config/i3; nvim ./config'
     abbr nvconfig '~/.config/nvim; nvim .'
     abbr fshconfig '~/.config/fish; nvim .'
-    abbr oSn 'optimus-manager --switch nvidia --no-confirm' 
+    abbr osn 'optimus-manager --switch nvidia --no-confirm' 
+    abbr opm 'optimus-manager --print-mode'
     abbr nv 'nvim'
     abbr hdmioff 'xrandr --output HDMI-0 --off'
     abbr hdmion 'xrandr --output HDMI-0 --auto --right-of eDP-1-1'
@@ -36,13 +37,11 @@
     abbr cp 'cp -i'
     abbr rm 'rm -i'
     abbr curl 'xh'
-    abbr mvngen 'mvn archetype:generate -DgroupId=JavaProject -DartifactId=JavaProject -DpackageName=JavaProject -Dversion=1.0-SNAPSHOT -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false'
+    abbr st 'speedtest --simple'
+    abbr icat 'kitty +kitten icat'
 
     function mkcd
         mkdir -pv $argv;
         cd $argv;
     end
 end
-
-# Turso
-export PATH="/home/chrisks/.turso:$PATH"
