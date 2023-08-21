@@ -15,10 +15,11 @@ return require('packer').startup(function(use)
     }
 
     use { 'bluz71/vim-moonfly-colors', branch = 'cterm-compat' }
-    use "EdenEast/nightfox.nvim" -- Packer
+    use("EdenEast/nightfox.nvim") -- Packer
 
-    use  'NLKNguyen/papercolor-theme'
+    use('NLKNguyen/papercolor-theme')
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter-refactor')
 
     use("ThePrimeagen/harpoon")
 
@@ -112,14 +113,24 @@ return require('packer').startup(function(use)
     use('ms-jpq/coq_nvim', {branch = 'coq'})
     use('ms-jpq/coq.thirdparty', {branch = '3p'})
     use('ms-jpq/coq.artifacts', {branch = 'artifacts'})
--- Lua
-use {
-    "AmeerTaweel/todo.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-        require("todo").setup {
-        }
-    end
-}
 
+    use {
+        "AmeerTaweel/todo.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = function()
+            require("todo").setup {
+            }
+        end
+    }
+
+    use("lukas-reineke/indent-blankline.nvim")
+
+    use("folke/trouble.nvim")
+
+    use({
+        "epwalsh/obsidian.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+        }
+    })
 end)

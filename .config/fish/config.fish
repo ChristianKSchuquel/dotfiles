@@ -19,6 +19,7 @@
     abbr grm 'go run main.go'
     abbr cr 'cargo run'
     abbr i3config '~/.config/i3; nvim ./config'
+    abbr qtconfig '~/.config/qtile; nvim ./config.py'
     abbr nvconfig '~/.config/nvim; nvim .'
     abbr fshconfig '~/.config/fish; nvim .'
     abbr osn 'optimus-manager --switch nvidia --no-confirm' 
@@ -37,7 +38,7 @@
     abbr cp 'cp -i'
     abbr rm 'rm -i'
     abbr curl 'xh'
-    abbr st 'speedtest --simple'
+    abbr st 'speedtest'
     abbr icat 'kitty +kitten icat'
 
     function mkcd

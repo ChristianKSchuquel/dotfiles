@@ -24,3 +24,14 @@ vim.opt.updatetime = 50
 vim.opt.cursorline = true
 
 vim.api.nvim_set_option("clipboard","unnamed")
+
+-- vim.opt.fillchars = "fold: "  
+-- vim.wo.foldmethod = "expr"  
+-- vim.opt.foldlevel = 99  
+vim.cmd([[
+    set foldmethod=expr
+    set foldexpr=nvim_treesitter#foldexpr()
+    set nofoldenable
+    command W execute "w"
+]])
+
