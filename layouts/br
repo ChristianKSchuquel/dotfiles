@@ -303,7 +303,7 @@ xkb_symbols "nativo-epo" {
 // Uma adaptação do layout Colemak DH para ABNT, adicionando acentos e a cecedilha como Alt de C
 // Algumas teclas são as mesmas do layout colemak dh origial como a ";" que fica no lugar do "p" e a tecla "/" por minha preferência.
 
-xkb_symbols "colemak_dh" {
+xkb_symbols "colemak_dh_br" {
 
     include "latin"
     name[Group1]= "Portuguese Br (Colemak DH)";

@@ -27,12 +27,13 @@ exec --no-startup-id xrandr --output HDMI-0 --auto --right-of eDP-1-1
 # Keyboard Stuff
 # =======================================================
 
-exec --no-startup-id "setxkbmap -layout 'br,us' -variant 'colemak_dh,colemak_dh' -option 'caps:backspace, grp:alt_shift_toggle'"
+exec --no-startup-id "setxkbmap -layout 'br,us' -variant 'colemak_dh_br,colemak_dh' -option 'caps:backspace, grp:alt_shift_toggle'"
 # exec --no-startup-id "setxkbmap -layout 'us,br' -option 'grp:alt_shift_toggle'"
 
 # To use the bind bellow my colemak adaptation to Portuguese(br) is needed at /usr/share/x11/symbols/br
-bindsym $alt+Control+c exec "setxkbmap -layout 'br,us' -variant 'colemak_dh,colemak_dh' -option 'caps:backspace, grp:alt_shift_toggle'"
-bindsym $alt+Control+q exec "setxkbmap -layout 'us,br' -option 'grp:alt_shift_toggle'"
+bindsym $alt+Control+c exec "setxkbmap -layout 'br,us' -variant 'colemak_dh_br,colemak_dh' -option 'caps:backspace, grp:alt_shift_toggle'"
+bindsym $alt+Control+q exec "setxkbmap -layout 'us,br' -option 'grp:alt_shift_toggle' -option ''"
+
 
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
@@ -281,6 +282,19 @@ bindsym $mod+m bar mode invisible
 bindsym $mod+n bar mode dock
 
 #================
+# Screenshots
+#================
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboar
+
+#================
 # Execs
 #================
 
@@ -288,4 +302,4 @@ bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080
 exec_always feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
 exec_always $terminal
 exec_always picom -I 1 -O 1
-exec_always copyq
+exec_always copyq --start-server
