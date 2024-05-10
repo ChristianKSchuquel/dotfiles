@@ -6,7 +6,7 @@ require("catppuccin").setup({
     },
     transparent_background = true,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
-    term_colors = false,
+    term_colors = true,
     dim_inactive = {
         enabled = false,
         shade = "dark",
@@ -43,3 +43,4 @@ require("catppuccin").setup({
 
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
+

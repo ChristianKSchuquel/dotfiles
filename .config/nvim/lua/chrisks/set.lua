@@ -23,6 +23,8 @@ vim.opt.updatetime = 50
 
 vim.opt.cursorline = true
 
+vim.opt.mouse = ""
+
 vim.api.nvim_set_option("clipboard","unnamed")
 
 -- vim.opt.fillchars = "fold: "  
@@ -33,5 +35,6 @@ vim.cmd([[
     set foldexpr=nvim_treesitter#foldexpr()
     set nofoldenable
     command W execute "w"
+    command Wq execute "wq"
 ]])
 

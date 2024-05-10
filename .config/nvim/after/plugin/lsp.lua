@@ -1,33 +1,18 @@
-local lsp = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
-vim.cmd('autocmd VimEnter * COQnow -s')
+lsp_zero.on_attach(function(client, bufnr)
+  -- see :help lsp-zero-keybindings
+  -- to learn the available actions
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
 
-local coq = require "coq" -- add this
--- local cmp = require('cmp')
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
 
-lsp.preset('recommended')
-lsp.setup(coq.lsp_ensure_capabilities())
-
-vim.diagnostic.config {
-  virtual_text = true,
-  signs =true, 
-  underline = true,
-}
-
-
-vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>")
-
--- Make sure you setup `cmp` after lsp-zero
---
--- local cmp = require('cmp')
--- local cmp_action = require('lsp-zero').cmp_action()
---
--- cmp.setup({
---   mapping = {
---     -- `Enter` key to confirm completion
---     ['<CR>'] = cmp.mapping.confirm({select = false}),
---
---     -- Ctrl+Space to trigger completion menu
---     ['<C-Space>'] = cmp.mapping.complete(),
---   }
--- })
+vim.keymap.set('n', 'ga', function()
+    vim.lsp.buf.code_action({apply=true}) end, bufopts)

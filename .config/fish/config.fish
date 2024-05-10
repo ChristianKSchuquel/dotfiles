@@ -1,14 +1,14 @@
 ﻿if status is-interactive
-# Commands to run in interactive sessions can go here
-
     set fish_greeting ""
     export EDITOR=nvim
     alias "config"='/usr/bin/git --git-dir=$HOME/dotfiles.git/ --work-tree=$HOME'
     set -gx PATH $PATH ~/.cargo/bin
+    set -x TERMINAL 'kitty'
     colorscript random
 
     abbr cls 'clear'
     abbr ls 'lsd -a --oneline --group-dirs=first'
+    abbr lt 'lsd -a --oneline --group-dirs=first --tree --depth 2'
     abbr y 'yay'
     abbr rf 'rm -rf'
     abbr pS 'sudo pacman -S'
@@ -40,6 +40,8 @@
     abbr curl 'xh'
     abbr st 'speedtest'
     abbr icat 'kitty +kitten icat'
+    abbr cat 'bat'
+    abbr tms 'tms && tmux attach'
 
     function mkcd
         mkdir -pv $argv;

@@ -298,8 +298,11 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 # Execs
 #================
 
-bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
-exec_always feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
+# bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080/?dark' --keep-http --output-dir /tmp/
+bindsym $mod+w exec feh --bg-scale 'https://source.unsplash.com/random/1920x1080' --keep-http --output-dir /tmp/
+exec_always feh --bg-scale 'https://source.unsplash.com/random/1920x1080' --keep-http --output-dir /tmp/
 exec_always $terminal
 exec_always picom -I 1 -O 1
-exec_always copyq --start-server
+exec_always copyq
+exec_always optimus-manager-qt
+exec_always ksnip -stylesheet=/home/chrisks/.config/ksnip/theme.css
